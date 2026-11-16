@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100e0d">
+  <title>Your business. Your digital presence. — AURELLE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #100e0d;
+      --warm-white: #f2eee8;
+      --platinum: #B5B0A5;
+      --platinum-light: #d0ccc3;
+      --line: rgba(181, 176, 165, .2);
+      font-family: "DM Sans", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      margin: 0;
+      padding: 40px clamp(22px, 5vw, 72px) 28px;
+      position: relative;
+      isolation: isolate;
+      background:
+        radial-gradient(ellipse at 50% -18%, rgba(181, 176, 165, .11), transparent 44%),
+        radial-gradient(ellipse at 4% 42%, rgba(93, 85, 76, .13), transparent 36%),
+        radial-gradient(ellipse at 96% 76%, rgba(74, 67, 60, .12), transparent 39%),
+        linear-gradient(145deg, #171513 0%, #100e0d 48%, #151311 100%);
+      color: var(--warm-white);
+    }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 42%, transparent 32%, rgba(0, 0, 0, .28) 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, .018), transparent 32%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .page-shell { width: min(100%, 1120px); margin: 0 auto; }
+
+    .masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .wordmark {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 500;
+      letter-spacing: .17em;
+    }
+
+    .studio-label {
+      color: var(--platinum);
+      font-size: 10px;
+      letter-spacing: .2em;
+      line-height: 1.8;
+      text-align: right;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 22px 0 clamp(48px, 8vh, 82px);
+      background: rgba(181, 176, 165, .4);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(48px, 8vw, 112px);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .94;
+    }
+
+    h1 span { display: block; }
+
+    .intro {
+      max-width: 540px;
+      margin: 28px 0 0;
+      color: rgba(242, 238, 232, .68);
+      font-size: clamp(14px, 1.15vw, 16px);
+      font-weight: 400;
+      line-height: 1.85;
+      letter-spacing: .01em;
+    }
+
+    .content-section {
+      padding: clamp(80px, 12vw, 148px) 0;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 40px;
+    }
+
+    .section-kicker {
+      margin: 0 0 22px;
+      color: #d0ccc3;
+      font-size: 13px;
+      letter-spacing: .16em;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 400;
+      letter-spacing: -.045em;
+      line-height: 1;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin: 58px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .benefits li {
+      min-height: 112px;
+      padding: 20px 20px 0 0;
+      border-top: 1px solid rgba(181, 176, 165, .42);
+      color: rgba(242, 238, 232, .78);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(22px, 2.4vw, 29px);
+      line-height: 1.2;
+    }
+
+    .cta-section { padding: clamp(80px, 12vw, 140px) 0; }
+
+    .cta-copy {
+      max-width: 560px;
+      margin: 20px 0 30px;
+      color: rgba(242, 238, 232, .68);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 0 25px;
+      border: 1px solid var(--platinum);
+      border-radius: 2px;
+      background: linear-gradient(135deg, #c7c3ba 0%, var(--platinum) 55%, #a8a397 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .42), 0 8px 22px rgba(0, 0, 0, .22);
+      color: #171513;
+      font: inherit;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      cursor: pointer;
+    }
+
+    .button::after {
+      content: "↗";
+      font-size: 14px;
+      line-height: 1;
+      transition: transform .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: var(--platinum-light);
+      background: linear-gradient(135deg, #ddd9d1 0%, var(--platinum-light) 55%, #b8b4aa 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55), 0 12px 26px rgba(0, 0, 0, .3);
+    }
+
+    .button:hover::after { transform: translate(2px, -2px); }
+    .button:active { transform: translateY(0); }
+    .button:focus-visible, input:focus-visible, textarea:focus-visible, .contact-link:focus-visible { outline: 2px solid var(--warm-white); outline-offset: 4px; }
+
+    .inquiry-section {
+      padding: clamp(72px, 10vw, 112px) 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 28px;
+    }
+
+    .form-intro {
+      margin: 16px 0 0;
+      color: rgba(242, 238, 232, .68);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .inquiry-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 27px 24px;
+      max-width: 760px;
+      margin-top: 48px;
+    }
+
+    .field { display: flex; flex-direction: column; gap: 11px; }
+    .field-full { grid-column: 1 / -1; }
+
+    .field label {
+      color: rgba(242, 238, 232, .88);
+      font-size: 11px;
+      letter-spacing: .08em;
+    }
+
+    .field input, .field textarea {
+      width: 100%;
+      border: 1px solid rgba(181, 176, 165, .3);
+      border-radius: 0;
+      padding: 15px 16px;
+      background: rgba(255, 255, 255, .025);
+      color: var(--warm-white);
+      font: inherit;
+      font-size: 14px;
+      transition: border-color .2s ease, background-color .2s ease;
+    }
+
+    .field input::placeholder, .field textarea::placeholder { color: rgba(242, 238, 232, .38); }
+    .field input:focus, .field textarea:focus { border-color: var(--platinum); background: rgba(255, 255, 255, .04); outline: none; }
+    .field textarea { min-height: 150px; resize: vertical; }
+    .inquiry-form .button { justify-self: start; }
+
+    .form-note {
+      grid-column: 1 / -1;
+      margin: -10px 0 0;
+      color: rgba(242, 238, 232, .48);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      padding: 42px 0 12px;
+      scroll-margin-top: 28px;
+    }
+
+    .footer-title {
+      margin: 0 0 20px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      color: rgba(242, 238, 232, .68);
+      font-size: 13px;
+      line-height: 1.8;
+      list-style: none;
+    }
+
+    .contact-link { color: inherit; text-decoration-color: rgba(181, 176, 165, .55); text-underline-offset: 4px; }
+    .contact-link:hover { color: var(--platinum); }
+
+    @media (max-width: 600px) {
+      body { padding: 28px 22px; }
+      .wordmark { font-size: 25px; }
+      .studio-label { font-size: 8px; letter-spacing: .14em; }
+      .divider { margin: 18px 0 54px; }
+      h1 { font-size: clamp(38px, 10vw, 58px); }
+      .intro { max-width: 420px; margin-top: 22px; font-size: 14px; line-height: 1.8; }
+      .content-section { padding: 76px 0; }
+      .benefits { grid-template-columns: 1fr; gap: 18px; margin-top: 38px; }
+      .benefits li { min-height: 0; padding-top: 16px; }
+      .cta-section { padding: 78px 0; }
+      .inquiry-form { grid-template-columns: 1fr; gap: 22px; margin-top: 34px; }
+      .field-full { grid-column: auto; }
+      .form-note { grid-column: auto; margin-top: 0; }
+      .inquiry-section { padding: 72px 0; }
+      .footer { padding-top: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="masthead">
+      <p class="wordmark">AURELLE</p>
+      <div class="studio-label">WEB DESIGN STUDIO</div>
+    </header>
+    <div class="divider" aria-hidden="true"></div>
+    <section aria-labelledby="headline">
+      <h1 id="headline"><span>Your business.</span><span>Your digital presence.</span></h1>
+      <p class="intro">We design and develop refined websites that bring businesses online and create lasting first impressions.</p>
+    </section>
+
+    <section class="content-section" aria-labelledby="benefits-title">
+      <h2 id="benefits-title">What your website can do</h2>
+      <ul class="benefits">
+        <li>Make your business discoverable.</li>
+        <li>Present your brand professionally.</li>
+        <li>Give customers a place to connect with you.</li>
+      </ul>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <p class="section-kicker">Have something in mind?</p>
+      <h2 id="cta-title">Let’s make it happen.</h2>
+      <p class="cta-copy">Tell us about your business and the website you envision.</p>
+      <a class="button" href="#project-inquiry">Discuss your project</a>
+    </section>
+
+    <section class="inquiry-section" id="project-inquiry" aria-labelledby="inquiry-title">
+      <p class="section-kicker">Project inquiry</p>
+      <h2 id="inquiry-title">Tell us what you have in mind.</h2>
+      <p class="form-intro">Let’s start with your idea.</p>
+      <form class="inquiry-form" id="inquiry-form">
+        <div class="field">
+          <label for="full-name">Your name</label>
+          <input id="full-name" name="name" type="text" autocomplete="name" placeholder="Full name" required>
+        </div>
+        <div class="field">
+          <label for="business-name">Business name</label>
+          <input id="business-name" name="business" type="text" autocomplete="organization" placeholder="Business name" required>
+        </div>
+        <div class="field field-full">
+          <label for="project-details">Project details</label>
+          <textarea id="project-details" name="details" placeholder="Tell us about your idea..." required></textarea>
+        </div>
+        <p class="form-note">Your inquiry will open in WhatsApp, where you can review and send your message.</p>
+        <button class="button" type="submit">Send your inquiry</button>
+      </form>
+    </section>
+
+    <footer class="footer" id="contact">
+      <h2 class="footer-title">Contact</h2>
+      <ul class="contact-list">
+        <li>WhatsApp: <a class="contact-link" href="https://wa.me/96176779248">+961 76 779 248</a></li>
+        <li>Email: <a class="contact-link" href="mailto:aurellestudioweb@gmail.com">aurellestudioweb@gmail.com</a></li>
+        <li>Instagram: <a class="contact-link" href="https://www.instagram.com/aurellestudioweb/">aurellestudioweb</a></li>
+      </ul>
+    </footer>
+  </main>
+  <script>
+    const inquiryForm = document.querySelector("#inquiry-form");
+
+    inquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!inquiryForm.reportValidity()) return;
+
+      const formData = new FormData(inquiryForm);
+      const message = [
+        "Project inquiry — Aurelle Studio",
+        "",
+        `Name: ${formData.get("name")}`,
+        `Business name: ${formData.get("business")}`,
+        "",
+        "Project details:",
+        formData.get("details")
+      ].join("\n");
+      const whatsappUrl = `https://wa.me/96176779248?text=${encodeURIComponent(message)}`;
+
+      window.location.assign(whatsappUrl);
+    });
+  </script>
+</body>
+</html>
